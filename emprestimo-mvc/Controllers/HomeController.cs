@@ -15,10 +15,8 @@ namespace emprestimo_mvc.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Dashboard()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
