@@ -20,14 +20,32 @@ namespace emprestimo_mvc.Controllers
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult NovoEmprestimo()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult ValorNovoEmprestimo()
+        {
+            return View();
+        }
+
+        public IActionResult EncerramentoNovoEmprestimo()
+        {
+            return View();
+        }
+
+        public IActionResult EntradaNovoEmprestimo()
+        {
+            return View();
+        }
+
+        public IActionResult PrazoNovoEmprestimo()
+        {
+            return View();
+        }
+
+        public IActionResult CadastrarNovoCliente()
         {
             return View();
         }

@@ -27,15 +27,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav align--itens">
-                        <a class="nav-item nav-link active" href="dashboard.php">
+                        <a asp-controller="Home" asp-action="Dashboard" class="nav-item nav-link active">
                             <i class="fas fa-chalkboard-teacher"></i>
                             Dashboard <span class="sr-only">(current)</span>
                         </a>
-                        <a class="nav-item nav-link active" href="novoEmprestimo.php">
+                        <a asp-controller="Home" asp-action="novoEmprestimo" class="nav-item nav-link active">
                             <i class="far fa-money-bill-alt"></i>
                             Novo empréstimo
                         </a>
-                        <a class="nav-item nav-link active" href="cadastrarNovoCliente.php">
+                        <a asp-controller="Home" asp-action="cadastrarNovoCliente" class="nav-item nav-link active">
                             <i class="far fa-address-card"></i>
                             Novo cliente
                         </a>
