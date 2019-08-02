@@ -23,8 +23,13 @@ using emprestimo_mvc.Models;
 
 #line default
 #line hidden
+#line 3 "C:\Users\Teu\source\repos\emprestimo-dotnet-mvc\emprestimo-mvc\Views\_ViewImports.cshtml"
+using emprestimomvc.Models;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"583387379a597938339285f5a623245873b0a91c", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"97273ccd0fa8598e2846ea67b6b967100fef09c9", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e36b429ef24295e326b9e48fff2c856f0c2bea5b", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using emprestimo_mvc.Models;
+using emprestimomvc.Models;
 
 namespace emprestimo_mvc.Controllers
 {
@@ -45,7 +46,13 @@ namespace emprestimo_mvc.Controllers
             return View();
         }
 
+        [HttpGet("CadastrarNovoCliente")]
         public IActionResult CadastrarNovoCliente()
+        {
+            return View();
+        }
+        [HttpPost("CadastrarNovoCliente")]
+        public IActionResult CadastrarNovoCliente(Pessoa pessoa)
         {
             return View();
         }
