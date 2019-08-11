@@ -32,3 +32,75 @@ nightMode.addEventListener('click', () => {
     // senão bota a cor original
     metaThemeColor.setAttribute("content", '#005f97');
 });
+
+//Salvar os dados dos inputs novo emprestiomo no localstorage
+
+var inputNovoEmprestimo = document.getElementById('nomeNovoEmprestimo');
+
+var btnNovoEmprestimo = document.getElementById("btn-novoEmprestimo");
+if (btnNovoEmprestimo) {
+    btnNovoEmprestimo.addEventListener("click", function () {
+        window.localStorage.setItem("nomeCliente", inputNovoEmprestimo.value);
+
+        window.location.href = "Home/ValorNovoEmprestimo";
+    });
+}
+
+
+var inputValorEmprestimo = document.getElementById('valorEmprestimo');
+
+var btnValorEmprestimo = document.getElementById("btn-valorEmprestimo");
+if (btnValorEmprestimo) {
+    btnValorEmprestimo.addEventListener("click", function () {
+        window.localStorage.setItem("valorEmprestimo", inputValorEmprestimo.value);
+
+        window.location.href = "PrazoNovoEmprestimo";
+    });
+}
+
+var inputPrazoEmprestimo = document.getElementById('prazoEmprestimo');
+
+var btnPrazoEmprestimo = document.getElementById("btn-prazoEmprestimo");
+if (btnPrazoEmprestimo) {
+    btnPrazoEmprestimo.addEventListener("click", function () {
+        window.localStorage.setItem("prazoEmprestimo", inputPrazoEmprestimo.value);
+
+        window.location.href = "EntradaNovoEmprestimo";
+    });
+}
+
+var inputEntradaEmprestimo = document.getElementById('entradaEmprestimo');
+
+
+var btnEntradaEmprestimo = document.getElementById("btn-entradaEmprestimo");
+if (btnEntradaEmprestimo) {
+    btnEntradaEmprestimo.addEventListener("click", function () {
+        window.localStorage.setItem("entradaEmprestimo", inputEntradaEmprestimo.value);
+
+        window.location.href = "EncerramentoNovoEmprestimo";
+    });
+}
+
+var inputNomeEncerramento = document.getElementById('nomeEncerramento');
+
+if (inputNomeEncerramento) {
+    inputNomeEncerramento.value = window.localStorage["nomeCliente"];
+}
+
+var inputValorEncerramento = document.getElementById('valorEncerramento');
+
+if (inputValorEncerramento) {
+    inputValorEncerramento.value = window.localStorage["valorEmprestimo"];
+}
+
+var inputPrazoEncerramento = document.getElementById('prazoEncerramento');
+
+if (inputPrazoEncerramento) {
+    inputPrazoEncerramento.value = window.localStorage["prazoEmprestimo"];
+}
+
+var inputEntradaEncerramento = document.getElementById('entradaEncerramento');
+
+if (inputEntradaEncerramento) {
+    inputEntradaEncerramento.value = window.localStorage["entradaEmprestimo"];
+}

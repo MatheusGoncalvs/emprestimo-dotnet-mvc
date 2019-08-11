@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace emprestimomvc.Models
 {
-    public class Emprestimo
+    public class EmprestimoViewModel
     {
         public int Id { get; set; }
         public float Valor { get; set; }
         public string Prazo { get; set; }
         public DateTime DataEntrada { get; set; }
         public Pessoa Pessoa { get; set; }
+        public string NomeCliente { get; set; }
     }
 }

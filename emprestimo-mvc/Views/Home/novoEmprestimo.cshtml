@@ -1,29 +1,27 @@
 <section class="content">
     <div class="container-fluid">
-        <form action="valorNovoEmprestimo" method="">
-            <div class="row justify-content-center">
-                <div class="col-sm-5 block">
-                    <div class="row titulo-bloco">
-                        <h1>Qual o nome do <strong>cliente</strong>?</h1>
+        <div class="row justify-content-center">
+            <div class="col-sm-5 block">
+                <div class="row titulo-bloco">
+                    <h1>Qual o nome do <strong>cliente</strong>?</h1>
+                </div>
+                <div class="middle--block">
+                    <div class="form-group content-block">
+                        <label for="nomeNovoEmprestimo">Nome</label>
+                        <input id="nomeNovoEmprestimo" type="text" class="form-control">
                     </div>
-                    <div class="middle--block">
-                        <div class="form-group content-block">
-                            <label for="nomeClienteNovoEmp">Nome</label>
-                            <input id="nomeClienteNovoEmp" type="text" class="form-control">
-                        </div>
-                        <input type="submit" class="btn btn-success" value="CONTINUAR">
-                    </div>
-                    <div class="row bottom-bloco">
-                        <a href="#" id="link-novo-cliente" data-toggle="modal" data-target="#modalNovoCliente">
-                            <h3>
-                                <i class="far fa-address-card"></i>
-                                Cadastrar novo cliente
-                            </h3>
-                        </a>
-                    </div>
+                    <input id="btn-novoEmprestimo" type="submit" class="btn btn-success" value="CONTINUAR">
+                </div>
+                <div class="row bottom-bloco">
+                    <a href="#" id="link-novo-cliente" data-toggle="modal" data-target="#modalNovoCliente">
+                        <h3>
+                            <i class="far fa-address-card"></i>
+                            Cadastrar novo cliente
+                        </h3>
+                    </a>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 </section>
 

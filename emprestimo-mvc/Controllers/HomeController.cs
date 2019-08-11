@@ -21,8 +21,16 @@ namespace emprestimo_mvc.Controllers
             return View();
         }
 
+        [HttpGet("NovoEmprestimo")]
         public IActionResult NovoEmprestimo()
         {
+            return View();
+        }
+
+        [HttpPost("NovoEmprestimo")]
+        public IActionResult NovoEmprestimo(Pessoa pessoa)
+        {
+
             return View();
         }
 
@@ -31,7 +39,13 @@ namespace emprestimo_mvc.Controllers
             return View();
         }
 
+        [HttpGet("Home/EncerramentoNovoEmprestimo")]
         public IActionResult EncerramentoNovoEmprestimo()
+        {
+            return View();
+        }
+        [HttpPost("Home/EncerramentoNovoEmprestimo")]
+        public IActionResult EncerramentoNovoEmprestimo(EmprestimoViewModel emprestimo)
         {
             return View();
         }
@@ -55,6 +69,7 @@ namespace emprestimo_mvc.Controllers
         public IActionResult CadastrarNovoCliente(Pessoa pessoa)
         {
             return View();
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

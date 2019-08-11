@@ -1,31 +1,36 @@
+@model EmprestimoViewModel
 <section class="content">
-        <div class="container-fluid">
-            <form action="dashboard" method="">
-                <div class="row justify-content-center">
-                    <div class="col-sm-5 block">
-                        <div class="row titulo-bloco">
-                            <h1>Empréstimo cadastrado com sucesso!</h1>
-                        </div>
-                        <div class="middle--block">
-                            <div class="row input-padding-resumo">
-                                <h2>Resumo - - - - - - - - - - - - - - - - - - - - - - - - -</h2>
-                            </div>
-                            <div class="row input-padding-resumo">
-                                <h3><strong>Cliente: </strong>João das Frutas</h3>
-                            </div>
-                            <div class="row input-padding-resumo">
-                                <h3><strong>Valor do empréstimo: </strong>R$ 1.000,00</h3>
-                            </div>
-                            <div class="row input-padding-resumo">
-                                <h3><strong>Prazo para pagamento: </strong>2x de R$ 500,00</h3>
-                            </div>
-                            <div class="row input-padding-resumo">
-                                <h3><strong>Data da primeira parcela: </strong>01/05/2019</h3>
-                            </div>
-                        </div>
-                        <input id="btn-encerramento" type="submit" class="btn btn-success" value="Dashboard">
+    <div class="container-fluid">
+        <form method="post">
+            <div class="row justify-content-center">
+                <input asp-for="NomeCliente" id="nomeEncerramento" type="hidden" />
+                <input asp-for="Valor" id="valorEncerramento" type="hidden" />
+                <input asp-for="Prazo" id="prazoEncerramento" type="hidden" />
+                <input asp-for="DataEntrada" id="entradaEncerramento" type="hidden" />
+                <div class="col-sm-5 block">
+                    <div class="row titulo-bloco">
+                        <h1>Empréstimo cadastrado com sucesso!</h1>
                     </div>
+                    <div class="middle--block">
+                        <div class="row input-padding-resumo">
+                            <h2>Resumo - - - - - - - - - - - - - - - - - - - - - - - - -</h2>
+                        </div>
+                        <div class="row input-padding-resumo">
+                            <h3><strong>Cliente: </strong>João das Frutas</h3>
+                        </div>
+                        <div class="row input-padding-resumo">
+                            <h3><strong>Valor do empréstimo: </strong>R$ 1.000,00</h3>
+                        </div>
+                        <div class="row input-padding-resumo">
+                            <h3><strong>Prazo para pagamento: </strong>2x de R$ 500,00</h3>
+                        </div>
+                        <div class="row input-padding-resumo">
+                            <h3><strong>Data da primeira parcela: </strong>01/05/2019</h3>
+                        </div>
+                    </div>
+                    <input id="btn-encerramento" type="submit" class="btn btn-success" value="Dashboard">
                 </div>
-            </form>
-        </div>
-    </section>
+            </div>
+        </form>
+    </div>
+</section>
