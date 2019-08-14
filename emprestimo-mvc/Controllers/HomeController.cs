@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using emprestimo_mvc.Models;
-using emprestimomvc.Models;
+using emprestimomvc.Data.Entities;
 
 namespace emprestimo_mvc.Controllers
 {
@@ -45,7 +45,7 @@ namespace emprestimo_mvc.Controllers
             return View();
         }
         [HttpPost("Home/EncerramentoNovoEmprestimo")]
-        public IActionResult EncerramentoNovoEmprestimo(EmprestimoViewModel emprestimo)
+        public IActionResult EncerramentoNovoEmprestimo(Emprestimo emprestimo)
         {
             return View();
         }

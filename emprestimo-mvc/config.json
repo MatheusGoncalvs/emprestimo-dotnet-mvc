@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "emprestimoMvcConnectionString": "server=DESKTOP-IU15PIR\\SEKHARSQL;Database=emprestimoMvcDb;Integrated Security=true;MultipleActiveResultSets=true"
+  }
+}
