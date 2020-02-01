@@ -1,12 +1,12 @@
-@model Emprestimo
+@model EmprestimoModelView
 <section class="content">
     <div class="container-fluid">
         <form method="post">
             <div class="row justify-content-center">
-                <input asp-for="NomeCliente" id="nomeEncerramento" type="hidden" />
+                <input asp-for="Nome" id="nomeEncerramento" type="hidden" />
                 <input asp-for="Valor" id="valorEncerramento" type="hidden" />
                 <input asp-for="Prazo" id="prazoEncerramento" type="hidden" />
-                <input asp-for="DataEntrada" id="entradaEncerramento" type="hidden" />
+                <input asp-for="Entrada" id="entradaEncerramento" type="hidden" />
                 <div class="col-sm-5 block">
                     <div class="row titulo-bloco">
                         <h1>Empréstimo cadastrado com sucesso!</h1>
@@ -28,7 +28,6 @@
                             <h3><strong>Data da primeira parcela: </strong>01/05/2019</h3>
                         </div>
                     </div>
-                    <input id="btn-encerramento" type="submit" class="btn btn-success" value="Dashboard">
                 </div>
             </div>
         </form>

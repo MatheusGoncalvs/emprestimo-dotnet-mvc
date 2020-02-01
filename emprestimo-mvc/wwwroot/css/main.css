@@ -170,9 +170,9 @@ input:focus {
     margin-top: 100px;
 }
 
-.footer p {
-    text-align: center;
-}
+    .footer p {
+        text-align: center;
+    }
 
 .night-mode-icon {
     display: inline-block;
@@ -204,46 +204,46 @@ span.night-mode-text {
     --font-color-dark: #ddd;
 }
 
-.night-mode body {
-    background-color: var(--bg-dark);
-    color: var(--font-color-dark);
-}
+    .night-mode body {
+        background-color: var(--bg-dark);
+        color: var(--font-color-dark);
+    }
 
-.night-mode .titulo-bloco {
-    background-color: var(--bg-dark-soft);
-}
+    .night-mode .titulo-bloco {
+        background-color: var(--bg-dark-soft);
+    }
 
-.night-mode h1,
-h3,
-h2,
-a,
-a:hover {
-    color: var(--font-color-dark);
-}
+    .night-mode h1,
+    h3,
+    h2,
+    a,
+    a:hover {
+        color: var(--font-color-dark);
+    }
 
-.night-mode .bg-light {
-    background-color: var(--bg-dark-soft) !important;
-}
+    .night-mode .bg-light {
+        background-color: var(--bg-dark-soft) !important;
+    }
 
-.night-mode .block {
-    border-color: var(--bg-dark-soft);
-}
+    .night-mode .block {
+        border-color: var(--bg-dark-soft);
+    }
 
-.night-mode .navbar-light .navbar-nav .nav-link.active {
-    color: var(--font-color-dark) !important;
-}
+    .night-mode .navbar-light .navbar-nav .nav-link.active {
+        color: var(--font-color-dark) !important;
+    }
 
-.night-mode .bottom-bloco {
-    border-top: 1px solid var(--bg-dark-soft);
-}
+    .night-mode .bottom-bloco {
+        border-top: 1px solid var(--bg-dark-soft);
+    }
 
-.night-mode .modal-header {
-    background-color: var(--bg-dark-soft);
-}
+    .night-mode .modal-header {
+        background-color: var(--bg-dark-soft);
+    }
 
-.night-mode .modal-content {
-    background-color: var(--bg-dark);
-}
+    .night-mode .modal-content {
+        background-color: var(--bg-dark);
+    }
 
 
 /* Night mode switch button */
@@ -265,15 +265,15 @@ a:hover {
     margin-left: -9999px;
 }
 
-.switch+label {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    user-select: none;
-}
+    .switch + label {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        user-select: none;
+    }
 
-.switch-shadow+label {
+.switch-shadow + label {
     padding: 2px;
     width: 62px;
     height: 30px;
@@ -282,38 +282,44 @@ a:hover {
     transition: background 0.4s;
 }
 
-.switch-shadow+label:before,
-.switch-shadow+label:after {
-    display: block;
-    position: absolute;
-    content: "";
-}
+    .switch-shadow + label:before,
+    .switch-shadow + label:after {
+        display: block;
+        position: absolute;
+        content: "";
+    }
 
-.switch-shadow+label:before {
-    top: 2px;
-    left: 2px;
-    bottom: 2px;
-    right: 2px;
-    background-color: #fff;
-    border-radius: 60px;
-    transition: background 0.4s;
-}
+    .switch-shadow + label:before {
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        right: 2px;
+        background-color: #fff;
+        border-radius: 60px;
+        transition: background 0.4s;
+    }
 
-.switch-shadow+label:after {
-    top: 4px;
-    left: 4px;
-    bottom: 4px;
-    width: 25px;
-    background-color: #dddddd;
-    border-radius: 52px;
-    transition: margin 0.4s, background 0.4s;
-}
+    .switch-shadow + label:after {
+        top: 4px;
+        left: 4px;
+        bottom: 4px;
+        width: 25px;
+        background-color: #dddddd;
+        border-radius: 52px;
+        transition: margin 0.4s, background 0.4s;
+    }
 
-.sswitch-shadow:checked+label {
+.sswitch-shadow:checked + label {
     background-color: var(--bg-dark);
 }
 
-.switch-shadow:checked+label:after {
+.switch-shadow:checked + label:after {
     margin-left: 30px;
     background-color: #8ce196;
+}
+
+/*---Tela Novo Emprestimo */
+
+.ui-menu .ui-menu-item {
+    padding: 8px;
 }

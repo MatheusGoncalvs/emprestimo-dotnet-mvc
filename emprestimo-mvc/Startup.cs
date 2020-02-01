@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using emprestimomvc.Data;
+using emprestimomvc.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -38,6 +39,7 @@ namespace emprestimo_mvc
                 cfg.UseSqlServer(Configuration.GetConnectionString("emprestimoMvcConnectionString"));
             });
 
+            services.AddScoped<IEmprestimoData, SqlEmprestimoData>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

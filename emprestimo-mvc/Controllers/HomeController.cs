@@ -6,11 +6,24 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using emprestimo_mvc.Models;
 using emprestimomvc.Data.Entities;
+using emprestimomvc.Services;
+using emprestimomvc.Data.DTO;
+using emprestimomvc.Data;
 
 namespace emprestimo_mvc.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IEmprestimoData emprestimoData;
+
+        [BindProperty]
+        public Pessoa Pessoa { get; set; }
+
+        public HomeController(IEmprestimoData emprestimoData)
+        {
+            this.emprestimoData = emprestimoData;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -26,12 +39,19 @@ namespace emprestimo_mvc.Controllers
         {
             return View();
         }
-
+        //Verificar como pegar e passar o Id da pessoa pelas telas para inserir na tabela de emprestimos
         [HttpPost("NovoEmprestimo")]
-        public IActionResult NovoEmprestimo(Pessoa pessoa)
+        public IActionResult NovoEmprestimo(string pessoaNome)
         {
-
-            return View();
+            if (pessoaNome != null)
+            {
+                var pessoas = emprestimoData.BuscarPessoa(pessoaNome);
+                return View(pessoas);
+            }
+            else
+            {
+                return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            }
         }
 
         public IActionResult ValorNovoEmprestimo()
@@ -39,13 +59,19 @@ namespace emprestimo_mvc.Controllers
             return View();
         }
 
-        [HttpGet("Home/EncerramentoNovoEmprestimo")]
-        public IActionResult EncerramentoNovoEmprestimo()
+        [HttpGet("Home/ConfirmarEmprestimo")]
+        public IActionResult ConfirmarEmprestimo()
         {
             return View();
         }
-        [HttpPost("Home/EncerramentoNovoEmprestimo")]
-        public IActionResult EncerramentoNovoEmprestimo(Emprestimo emprestimo)
+        [HttpPost("Home/ConfirmarEmprestimo")]
+        public IActionResult ConfirmarEmprestimo(EmprestimoModelView emprestimo)
+        {
+            return RedirectToAction("EncerramentoNovoEmprestimo");
+        }
+
+        [HttpGet("Home/EncerramentoNovoEmprestimo")]
+        public IActionResult EncerramentoNovoEmprestimo()
         {
             return View();
         }
@@ -65,11 +91,19 @@ namespace emprestimo_mvc.Controllers
         {
             return View();
         }
+
         [HttpPost("CadastrarNovoCliente")]
         public IActionResult CadastrarNovoCliente(Pessoa pessoa)
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
 
+            emprestimoData.Add(Pessoa);
+            emprestimoData.Commit();
+
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

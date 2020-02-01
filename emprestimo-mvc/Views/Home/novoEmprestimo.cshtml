@@ -1,3 +1,4 @@
+<link href="~/css/main.css" rel="stylesheet" />
 <section class="content">
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -5,13 +6,15 @@
                 <div class="row titulo-bloco">
                     <h1>Qual o nome do <strong>cliente</strong>?</h1>
                 </div>
+                <!--<form asp-controller="Home" asp-action="ValorNovoEmprestimo"> -->
                 <div class="middle--block">
                     <div class="form-group content-block">
                         <label for="nomeNovoEmprestimo">Nome</label>
-                        <input id="nomeNovoEmprestimo" type="text" class="form-control">
+                        <input id="nomeNovoEmprestimo" name="nomeNovoEmprestimo" type="text" class="form-control">
                     </div>
                     <input id="btn-novoEmprestimo" type="submit" class="btn btn-success" value="CONTINUAR">
                 </div>
+                <!-- </form> -->
                 <div class="row bottom-bloco">
                     <a href="#" id="link-novo-cliente" data-toggle="modal" data-target="#modalNovoCliente">
                         <h3>
