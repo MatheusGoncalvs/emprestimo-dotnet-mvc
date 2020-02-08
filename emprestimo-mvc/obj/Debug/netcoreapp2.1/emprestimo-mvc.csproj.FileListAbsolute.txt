@@ -27,3 +27,5 @@ C:\Users\Teu\source\repos\emprestimo-dotnet-mvc\emprestimo-mvc\obj\Debug\netcore
 C:\Users\Teu\source\repos\emprestimo-dotnet-mvc\emprestimo-mvc\obj\Debug\netcoreapp2.1\emprestimo-mvc.pdb
 C:\Users\Teu\source\repos\emprestimo-dotnet-mvc\emprestimo-mvc\obj\Debug\netcoreapp2.1\emprestimo-mvc.csproj.CopyComplete
 C:\Users\Teu\source\repos\emprestimo-dotnet-mvc\emprestimo-mvc\obj\Debug\netcoreapp2.1\Razor\Views\Home\confirmarEmprestimo.g.cshtml.cs
+C:\Users\Teu\source\repos\emprestimo-dotnet-mvc\emprestimo-mvc\obj\Debug\netcoreapp2.1\Razor\Pages\_ViewImports.g.cshtml.cs
+C:\Users\Teu\source\repos\emprestimo-dotnet-mvc\emprestimo-mvc\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_cadastroNovoCliente.g.cshtml.cs

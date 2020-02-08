@@ -10,8 +10,5 @@ namespace emprestimomvc.Data.DTO
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public DateTime Entrada { get; set; }
-        public double Valor { get; set; }
-        public string Prazo { get; set; }
     }
 }

@@ -321,5 +321,11 @@ span.night-mode-text {
 /*---Tela Novo Emprestimo */
 
 .ui-menu .ui-menu-item {
-    padding: 8px;
+    padding: 20px;
+}
+
+.ui-menu li :hover, :focus, :active{
+    background-color: white;
+    color: #333;
+    border: none;
 }

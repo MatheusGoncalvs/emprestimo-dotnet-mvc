@@ -1,4 +1,5 @@
 ﻿using emprestimomvc.Data;
+using emprestimomvc.Data.DTO;
 using emprestimomvc.Data.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,11 +11,11 @@ namespace emprestimomvc.Services
 {
     public interface IEmprestimoData
     {
-        Pessoa Add(Pessoa newPessoa);
+        Object Add(Object newObject);
 
         List<string> BuscarNomePessoa(string term);
 
-        IEnumerable<Pessoa> BuscarPessoa(string nome);
+        Pessoa BuscarPessoa(string nome);
 
         int Commit();
     }

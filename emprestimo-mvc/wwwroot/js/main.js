@@ -36,7 +36,7 @@ $(document).ready(function () {
     });
 
     //Salvar os dados dos inputs novo emprestimo no localstorage
-    
+
     var inputNovoEmprestimo = document.getElementById('nomeNovoEmprestimo');
 
     var btnNovoEmprestimo = document.getElementById("btn-novoEmprestimo");
@@ -83,7 +83,7 @@ $(document).ready(function () {
     }
 
     //Inserindo nos inputs hidden os dados do local storage
-    
+
     var inputNomeEncerramento = document.getElementById('nomeEncerramento');
 
     if (inputNomeEncerramento) {

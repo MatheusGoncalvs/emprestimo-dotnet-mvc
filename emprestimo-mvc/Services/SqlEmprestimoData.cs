@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using emprestimomvc.Data;
+using emprestimomvc.Data.DTO;
 using emprestimomvc.Data.Entities;
 
 namespace emprestimomvc.Services
@@ -17,23 +18,31 @@ namespace emprestimomvc.Services
             this.db = db;
         }
 
-        public Pessoa Add(Pessoa newPessoa)
+        public Object Add(Object newObject)
         {
-            db.Add(newPessoa);
-            return newPessoa;
+            db.Add(newObject);
+            return newObject;
         }
 
-        public List<string> BuscarNomePessoa(string term)
+        //Retorna um DTO object. Tentando retornar id para salvar no banco o id da pessoa.
+        /*
+        public List<EmprestimoModelView> BuscarNomePessoa(string term)
         {
-            var resultSearch = db.pessoas.Where(p => p.Nome.Contains(term))
-                .Select(p => p.Nome).ToList();
-            return resultSearch;
-        }
+            using (db)
+            {
+                var resultSearch = from p in db.pessoas
+                                   select new EmprestimoModelView()
+                                   {
+                                       Id = p.Id,
+                                       Nome = p.Nome
+                                   };
+                return resultSearch.ToList();
+            }
+        } */
 
-        public IEnumerable<Pessoa> BuscarPessoa(string nome)
+        public Pessoa BuscarPessoa(string nome)
         {
-            var pessoas = db.pessoas.Where(p => p.Nome.Contains(nome)).ToList<Pessoa>();
-            return pessoas;
+             return this.db.pessoas.FirstOrDefault(p => p.Nome.Contains(nome));
         }
 
         public int Commit()
@@ -41,5 +50,11 @@ namespace emprestimomvc.Services
             return db.SaveChanges();
         }
 
+        List<string> IEmprestimoData.BuscarNomePessoa(string term)
+        {
+            var resultSearch = db.pessoas.Where(p => p.Nome.Contains(term))
+                .Select(p => p.Nome).ToList();
+            return resultSearch;
+        }
     }
 }

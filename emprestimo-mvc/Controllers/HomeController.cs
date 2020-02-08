@@ -39,20 +39,6 @@ namespace emprestimo_mvc.Controllers
         {
             return View();
         }
-        //Verificar como pegar e passar o Id da pessoa pelas telas para inserir na tabela de emprestimos
-        [HttpPost("NovoEmprestimo")]
-        public IActionResult NovoEmprestimo(string pessoaNome)
-        {
-            if (pessoaNome != null)
-            {
-                var pessoas = emprestimoData.BuscarPessoa(pessoaNome);
-                return View(pessoas);
-            }
-            else
-            {
-                return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-            }
-        }
 
         public IActionResult ValorNovoEmprestimo()
         {
@@ -65,9 +51,16 @@ namespace emprestimo_mvc.Controllers
             return View();
         }
         [HttpPost("Home/ConfirmarEmprestimo")]
-        public IActionResult ConfirmarEmprestimo(EmprestimoModelView emprestimo)
+        public IActionResult ConfirmarEmprestimo(Emprestimo emprestimo)
         {
-            return RedirectToAction("EncerramentoNovoEmprestimo");
+            var pessoa = emprestimoData.BuscarPessoa(emprestimo.NomeCliente);
+
+            var newPessoa = new Pessoa();
+            newPessoa.Id = pessoa.Id;
+
+            emprestimoData.Add(emprestimo);
+
+            return RedirectToAction("EncerramentoNovoEmprestimo", emprestimo);
         }
 
         [HttpGet("Home/EncerramentoNovoEmprestimo")]

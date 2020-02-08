@@ -20,15 +20,17 @@ namespace emprestimo_mvc.Controllers
 
         [Produces("application/json")]
         [HttpGet("search")]
-        public async Task<IActionResult> Search()
+        public IActionResult Search()
         {
             try
             {
                 string term = HttpContext.Request.Query["term"].ToString();
+
                 var search = emprestimoData.BuscarNomePessoa(term);
 
                 return Ok(search);
-            }catch
+            }
+            catch
             {
                 return BadRequest();
             }
