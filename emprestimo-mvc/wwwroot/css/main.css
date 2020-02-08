@@ -96,6 +96,14 @@ a:hover {
     padding: 5%;
 }
 
+.middle--block span{
+    color: orangered;
+}
+
+.middle--block .form-group {
+    margin-top: 1.3rem;
+}
+
 .bottom-bloco {
     border-top: 1px solid #ccc;
     padding-top: 15px;

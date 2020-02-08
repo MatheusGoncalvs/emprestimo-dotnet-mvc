@@ -26,7 +26,6 @@ namespace emprestimo_mvc.Controllers
 
         public IActionResult Index()
         {
-            throw new InvalidOperationException("Exceção gerada para teste");
             return View();
         }
 
