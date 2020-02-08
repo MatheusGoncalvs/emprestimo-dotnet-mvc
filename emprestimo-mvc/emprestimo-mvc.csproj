@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Error.cshtml" />
     <Content Remove="Views\Home\cadastrarNovoCliente.cshtml" />
     <Content Remove="Views\Home\dashboard.cshtml" />
     <Content Remove="Views\Home\encerramentoNovoEmprestimo.cshtml" />
@@ -16,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Pages\Error.cshtml" />
     <None Include="Views\Home\cadastrarNovoCliente.cshtml" />
     <None Include="Views\Home\dashboard.cshtml" />
     <None Include="Views\Home\encerramentoNovoEmprestimo.cshtml" />
@@ -141,6 +143,14 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
     <PackageReference Include="OdeToCode.UseNodeModules" Version="1.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Error.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Error.cshtml" />
   </ItemGroup>
 
 </Project>
